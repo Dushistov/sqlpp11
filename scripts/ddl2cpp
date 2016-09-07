@@ -211,6 +211,8 @@ types = {
     'timestamp': 'time_point',
     'enum': 'text',  # MYSQL
     'set': 'text',  # MYSQL
+    'real': 'floating_point',
+    'geometry': 'blob',
     }
 
 ddlColumn = Group(Optional(ddlConstraint).setResultsName("isConstraint") + OneOrMore(MatchFirst([ddlNotNull, ddlAutoValue, ddlDefaultValue, ddlFunctionWord("NOW"), ddlTerm, ddlNum, ddlColumnComment, ddlString, ddlArguments])))
