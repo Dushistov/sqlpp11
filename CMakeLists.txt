@@ -33,7 +33,7 @@ find_package(HinnantDate REQUIRED)
 
 add_library(sqlpp11 INTERFACE)
 
-target_link_libraries(sqlpp11 INTERFACE HinnantDate::Date)
+#target_link_libraries(sqlpp11 INTERFACE HinnantDate::Date)
 
 target_include_directories(sqlpp11 INTERFACE
   $<BUILD_INTERFACE:${sqlpp11_SOURCE_DIR}/include>
